@@ -1,5 +1,5 @@
 {% set name = "uvicorn" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f27889a332ee5c55b4841b11b2392d00dac079f39063fabc1e13e18ada3eb7ba
+  sha256: bda2225f673dffe7e3fd6223ebd22b010ab6e624a4e8cf4c4d380656c7eb264b
 
 build:
   number: 0
