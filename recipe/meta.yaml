@@ -24,10 +24,10 @@ requirements:
     - python
     - click =7
     - h11 =0.8
-    - websockets =7
+    - websockets =8
     - uvloop =0.12  # [not win]
     - httptools =0.0.13  # [not win]
-    - wsproto =0.13
+    - wsproto =0
 
 test:
   imports:
