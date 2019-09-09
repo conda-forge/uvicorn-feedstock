@@ -25,9 +25,9 @@ requirements:
     - click =7
     - h11 =0.8
     - websockets =8
-    - uvloop =0.12  # [not win]
+    - uvloop =0  # [not win]
     - httptools =0.0.13  # [not win]
-    - wsproto =0
+    - wsproto =0.13
 
 test:
   imports:
