@@ -23,9 +23,9 @@ requirements:
   run:
     - python
     - click =7
-    - h11 =0.8
-    - websockets =7
-    - uvloop =0.12  # [not win]
+    - h11 >=0.8,<0.10
+    - websockets =8
+    - uvloop >=0.14.0  # [not win]
     - httptools =0.0.13  # [not win]
     - wsproto =0.13
 
