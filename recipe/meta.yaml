@@ -1,5 +1,5 @@
 {% set name = "uvicorn" %}
-{% set version = "0.11.2" %}
+{% set version = "0.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 11f397855c7f35dc034a3d288883382a4c16afdfe6675b70896f55bd6051da64
+  sha256: 6fdaf8e53bf1b2ddf0fe9ed06079b5348d7d1d87b3365fe2549e6de0d49e631c
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - h11 >=0.8,<0.10
     - websockets =8
     - uvloop >=0.14.0  # [not win]
-    - httptools =0.0.13  # [not win]
+    - httptools =0.1  # [not win]
     - wsproto =0.13
 
 test:
