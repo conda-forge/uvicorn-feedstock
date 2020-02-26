@@ -1,5 +1,5 @@
 {% set name = "uvicorn" %}
-{% set version = "0.11.3" %}
+{% set version = "0.10.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6fdaf8e53bf1b2ddf0fe9ed06079b5348d7d1d87b3365fe2549e6de0d49e631c
+  sha256: c010df69d16e27f1a18481316325b4fd23f562c1fac050915fc03a397d0f6b64
 
 build:
   number: 0
@@ -23,10 +23,10 @@ requirements:
   run:
     - python
     - click =7
-    - h11 >=0.8,<0.10
+    - h11 =0.9
     - websockets =8
     - uvloop >=0.14.0  # [not win]
-    - httptools =0.1  # [not win]
+    - httptools =0.0.13  # [not win]
     - wsproto =0.13
 
 test:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/encode/uvicorn
   license: BSD-3-Clause
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.md'
+  license_file: LICENSE.md
   summary: 'The lightning-fast ASGI server. 🦄'
   description: |
     Uvicorn is a lightning-fast ASGI server implementation,
