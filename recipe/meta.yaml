@@ -1,4 +1,4 @@
-{% set version = "0.11.3" %}
+{% set version = "0.12.1" %}
 
 package:
   name: uvicorn
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: 6fdaf8e53bf1b2ddf0fe9ed06079b5348d7d1d87b3365fe2549e6de0d49e631c
+  sha256: a461e76406088f448f36323f5ac774d50e5a552b6ccb54e4fca8d83ef614a7c2
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py2k]
   entry_points:
@@ -21,13 +21,15 @@ requirements:
     - pip
   run:
     - python
-    - click =7
-    - h11 >=0.8,<0.10
-    - websockets =8
-    - httptools =0.1  # [not win]
-    - uvloop >=0.14.0  # [not win]
-    - wsproto =0.13
-    - gunicorn  # [not win]
+    - click 7.*
+    - h11 >=0.8
+    - typing_extensions  # [py<38]
+    - websockets 8.*
+    - httptools 0.1.*  # [not win]
+    - uvloop >=0.14  # [not win]
+    - watchgod 0.6.*
+    - python-dotenv >=0.13
+    - pyyaml >=5.1
 
 test:
   requires:
@@ -56,3 +58,4 @@ extra:
   recipe-maintainers:
     - carlodri
     - ocefpaf
+    - xhochy
