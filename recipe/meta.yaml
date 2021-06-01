@@ -1,4 +1,4 @@
-{% set version = "0.13.4" %}
+{% set version = "0.14.0" %}
 
 package:
   name: uvicorn
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: 3292251b3c7978e8e4a7868f4baf7f7f7bb7e40c759ecc125c37e99cdea34202
+  sha256: 45ad7dfaaa7d55cab4cd1e85e03f27e9d60bc067ddc59db52a2b0aeca8870292
 
 build:
   number: 0
@@ -23,15 +23,10 @@ requirements:
     - pip
   run:
     - python
-    - click 7.*
+    - asgiref >=3.3.4
+    - click >=7.*
     - h11 >=0.8
-    - typing_extensions  # [py<38]
-    - websockets 8.*
-    - httptools 0.1.*  # [not win]
-    - uvloop >=0.14  # [not win]
-    - watchgod 0.6.*
-    - python-dotenv >=0.13
-    - pyyaml >=5.1
+    - typing-extensions  # [py<38]
 
 test:
   requires:
