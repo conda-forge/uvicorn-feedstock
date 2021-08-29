@@ -9,7 +9,7 @@ source:
   sha256: d9a3c0dd1ca86728d3e235182683b4cf94cd53a867c288eaeca80ee781b2caff
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - uvicorn = uvicorn.main:main
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python
-    - asgiref >=3.3.4
+    - asgiref >=3.4.0
     - click >=7.*
     - h11 >=0.8
     - typing-extensions  # [py<38]
