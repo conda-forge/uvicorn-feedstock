@@ -1,8 +1,7 @@
-{% set name = "uvicorn" %}
 {% set version = "0.16.0" %}
 
 package:
-  name: {{ name }}-recipe
+  name: uvicorn-split
   version: {{ version }}
 
 source:
@@ -17,7 +16,7 @@ test:
     - pip
 
 outputs:
-  - name: {{ name }}
+  - name: uvicorn
 
     build:
       entry_points:
@@ -46,11 +45,15 @@ outputs:
         - pip check
         - uvicorn --help
 
-  - name: {{ name }}-standard
+  - name: uvicorn-standard
 
     requirements:
+      host:
+        - python
+        - pip
+        - {{ pin_subpackage('uvicorn', exact=True) }}
       run:
-        - {{ pin_subpackage(name, exact=True) }}
+        - {{ pin_subpackage('uvicorn', exact=True) }}
         - websockets >=10.0
         - httptools >=0.2.0,<0.4.0
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1  # [python_impl == "cpython" and not win]
@@ -77,6 +80,7 @@ about:
   dev_url: https://github.com/encode/uvicorn
 
 extra:
+  feedstock-name: uvicorn
   recipe-maintainers:
     - carlodri
     - ocefpaf
