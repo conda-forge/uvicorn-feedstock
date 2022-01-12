@@ -11,10 +11,6 @@ source:
 build:
   number: 1
 
-test:
-  requires:
-    - pip
-
 outputs:
   - name: uvicorn
 
@@ -39,6 +35,8 @@ outputs:
         - typing-extensions  # [py<38]
 
     test:
+      requires:
+        - pip
       imports:
         - uvicorn
       commands:
@@ -63,6 +61,8 @@ outputs:
         - PyYAML >=5.1
 
     test:
+      requires:
+        - pip
       commands:
         - pip check
 
