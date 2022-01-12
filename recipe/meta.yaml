@@ -38,7 +38,8 @@ outputs:
     build:
       entry_points:
         - uvicorn = uvicorn.main:main
-    script: {{ PYTHON }} -m pip install . -vv
+    script: build.sh  # [not win]
+    script: bld.bat  # [win]
 
     requirements:
       build:
