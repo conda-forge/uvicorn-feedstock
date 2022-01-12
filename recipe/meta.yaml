@@ -9,6 +9,9 @@ source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
   sha256: eacb66afa65e0648fcbce5e746b135d09722231ffffc61883d4fac2b62fbea8d
 
+build:
+  number: 1
+
 requirements:
   run:
     - {{ pin_subpackage(name, exact=True) }}
