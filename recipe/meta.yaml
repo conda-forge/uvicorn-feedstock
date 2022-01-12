@@ -67,7 +67,7 @@ outputs:
         - pip check
 
 about:
-  home: https://pypi.org/project/uvicorn/
+  home: https://github.com/encode/uvicorn
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
