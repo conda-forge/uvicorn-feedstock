@@ -38,8 +38,8 @@ outputs:
     build:
       entry_points:
         - uvicorn = uvicorn.main:main
-    script: build.sh  # [not win]
-    script: bld.bat  # [win]
+    script: uvicorn_build.bat  # [win]
+    script: uvicorn_build.sh   # [not win]
 
     requirements:
       build:
