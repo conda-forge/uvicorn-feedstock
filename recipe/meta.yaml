@@ -1,53 +1,24 @@
+{% set name = "uvicorn" %}
 {% set version = "0.16.0" %}
 
 package:
-  name: uvicorn
+  name: {{ name }}-standard
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
   sha256: eacb66afa65e0648fcbce5e746b135d09722231ffffc61883d4fac2b62fbea8d
 
-build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
-  entry_points:
-    - uvicorn = uvicorn.main:main
-
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-  host:
-    - python
-    - pip
   run:
-    - python
-    - asgiref >=3.4.0
-    - click >=7.*
-    - h11 >=0.8
-    - typing-extensions  # [py<38]
-
-outputs:
-  - name: uvicorn-standard
-    requirements:
-      run:
-        - {{ pin_subpackage('uvicorn', exact=True) }}
-        - websockets >=10.0
-        - httptools >=0.2.0,<0.4.0
-        - uvloop>=0.14.0,!=0.15.0,!=0.15.1  # [python_impl == "cpython" and not win]
-        - colorama >=0.4  # [win]
-        - watchgod >=0.6
-        - python-dotenv >=0.13
-        - PyYAML >=5.1
-    test:
-      imports:
-        - uvicorn
-      commands:
-        - pip check
-        - uvicorn --help
-      requires:
-        - pip
+    - {{ pin_subpackage(name, exact=True) }}
+    - websockets >=10.0
+    - httptools >=0.2.0,<0.4.0
+    - uvloop >=0.14.0,!=0.15.0,!=0.15.1  # [python_impl == "cpython" and not win]
+    - colorama >=0.4  # [win]
+    - watchgod >=0.6
+    - python-dotenv >=0.13
+    - PyYAML >=5.1
 
 test:
   requires:
@@ -57,6 +28,35 @@ test:
   commands:
     - pip check
     - uvicorn --help
+
+outputs:
+  - name: {{ name }}
+
+    build:
+      entry_points:
+        - uvicorn = uvicorn.main:main
+    script: {{ PYTHON }} -m pip install . -vv
+
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+      host:
+        - python
+        - pip
+      run:
+        - python
+        - asgiref >=3.4.0
+        - click >=7.*
+        - h11 >=0.8
+        - typing-extensions  # [py<38]
+
+    test:
+      imports:
+        - uvicorn
+      commands:
+        - pip check
+        - uvicorn --help
 
 about:
   home: https://pypi.org/project/uvicorn/
