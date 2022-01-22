@@ -245,6 +245,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-uvicorn-green.svg)](https://anaconda.org/conda-forge/uvicorn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/uvicorn.svg)](https://anaconda.org/conda-forge/uvicorn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/uvicorn.svg)](https://anaconda.org/conda-forge/uvicorn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/uvicorn.svg)](https://anaconda.org/conda-forge/uvicorn) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-uvicorn--standard-green.svg)](https://anaconda.org/conda-forge/uvicorn-standard) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/uvicorn-standard.svg)](https://anaconda.org/conda-forge/uvicorn-standard) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/uvicorn-standard.svg)](https://anaconda.org/conda-forge/uvicorn-standard) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/uvicorn-standard.svg)](https://anaconda.org/conda-forge/uvicorn-standard) |
 
 Installing uvicorn
 ==================
@@ -256,10 +257,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `uvicorn` can be installed with:
+Once the `conda-forge` channel has been enabled, `uvicorn, uvicorn-standard` can be installed with:
 
 ```
-conda install uvicorn
+conda install uvicorn uvicorn-standard
 ```
 
 It is possible to list all of the versions of `uvicorn` available on your platform with:
