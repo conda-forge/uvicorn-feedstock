@@ -9,7 +9,7 @@ source:
   sha256: 5180f9d059611747d841a4a4c4ab675edf54c8489e97f96d0583ee90ac3bfc23
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: uvicorn
@@ -71,7 +71,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
-  summary: The lightning-fast ASGI server. 🦄
+  summary: The lightning-fast ASGI server.
   description: |
     Uvicorn is a lightning-fast ASGI server implementation,
     using [uvloop](https://github.com/MagicStack/uvloop) and
