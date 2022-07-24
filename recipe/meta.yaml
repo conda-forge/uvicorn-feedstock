@@ -55,9 +55,9 @@ outputs:
         - httptools >=0.4.0
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1  # [python_impl == "cpython" and not win]
         - colorama >=0.4  # [win]
-        - watchfiles >=0.13  # [python_impl == "cpython"]
+        - watchfiles >=0.13  # [python_impl == "cpython" and not (aarch64 or ppc64le)]
         # TODO: deprecated, when watchfiles available for pypy
-        - watchgod >=0.6  # [python_impl == "pypy"]
+        - watchgod >=0.6  # [python_impl == "pypy" or (aarch64 or ppc64le)]
         - python-dotenv >=0.13
         - PyYAML >=5.1
 
@@ -67,9 +67,9 @@ outputs:
       commands:
         - pip check
       imports:
-        - uvicorn.supervisors.watchfilesreload  # [python_impl == "cpython"]
+        - uvicorn.supervisors.watchfilesreload  # [python_impl == "cpython" and not (aarch64 or ppc64le)]
         # TODO: deprecated, when watchfiles available for pypy
-        - uvicorn.supervisors.watchgodreload  # [python_impl == "pypy"]
+        - uvicorn.supervisors.watchgodreload  # [python_impl == "pypy" or (aarch64 or ppc64le)]
 
 about:
   home: https://github.com/encode/uvicorn
