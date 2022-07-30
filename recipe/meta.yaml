@@ -9,7 +9,7 @@ source:
   sha256: cade07c403c397f9fe275492a48c1b869efd175d5d8a692df649e6e7e2ed8f4e
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: uvicorn
