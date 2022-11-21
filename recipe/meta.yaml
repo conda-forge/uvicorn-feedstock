@@ -27,6 +27,7 @@ outputs:
       host:
         - python
         - pip
+        - hatchling
       run:
         - python
         - click >=7.*
@@ -52,7 +53,7 @@ outputs:
       run:
         - {{ pin_subpackage('uvicorn', exact=True) }}
         - websockets >=10.0
-        - httptools >=0.4.0
+        - httptools >=0.5.0
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1  # [python_impl == "cpython" and not win]
         - colorama >=0.4  # [win]
         - watchfiles >=0.13  # [python_impl == "cpython"]
