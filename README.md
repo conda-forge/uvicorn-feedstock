@@ -1,11 +1,11 @@
-About uvicorn
-=============
+About uvicorn-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uvicorn-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/encode/uvicorn
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uvicorn-feedstock/blob/main/LICENSE.txt)
 
 Summary: The lightning-fast ASGI server.
 
