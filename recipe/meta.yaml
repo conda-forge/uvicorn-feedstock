@@ -1,4 +1,4 @@
-{% set version = "0.22.0" %}
+{% set version = "0.23.1" %}
 
 package:
   name: uvicorn-split
@@ -6,9 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: 79277ae03db57ce7d9aa0567830bbb51d7a612f54d6e1e3e92da3ef24c2c8ed8
+  sha256: da9b0c8443b2d7ee9db00a345f1eee6db7317432c9d4400f5049cc8d358383be
 
 build:
+  skip: true  # [py<38]
   number: 0
 
 outputs:
@@ -32,7 +33,7 @@ outputs:
         - python
         - click >=7.0
         - h11 >=0.8
-        - typing_extensions  # [py<38]
+        - typing_extensions >=4.0  # [py<311]
 
     test:
       requires:
