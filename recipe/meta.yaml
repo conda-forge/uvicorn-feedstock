@@ -1,4 +1,4 @@
-{% set version = "0.23.2" %}
+{% set version = "0.24.0" %}
 
 package:
   name: uvicorn-split
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: 4d3cc12d7727ba72b64d12d3cc7743124074c0a69f7b201512fc50c3e3f1569a
+  sha256: 368d5d81520a51be96431845169c225d771c9dd22a58613e1a181e6c4512ac33
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 0
 
 outputs:
   - name: uvicorn
