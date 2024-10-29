@@ -43,6 +43,7 @@ test:
 
 outputs:
   - name: uvicorn
+
   - name: uvicorn-standard
     build:
       noarch: generic
@@ -53,7 +54,7 @@ outputs:
         - colorama >=0.4
         {% elif noarch_platform == "unix" %}
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1
-        {% endif }
+        {% endif %}
         - websockets >=10.4
         - httptools >=0.5.0
         - watchfiles >=0.13
