@@ -13,6 +13,7 @@ source:
   sha256: f78b36b143c16f54ccdb8190d0a26b5f1901fe5a3c777e1ab29f26391af8551e
 
 build:
+  noarch: python
   number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed --disable-pip-version-check
