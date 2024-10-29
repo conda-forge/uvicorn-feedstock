@@ -51,6 +51,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("uvicorn", max_pin="x.x.x") }}
+        - __{{ noarch_platform }}
         {% if noarch_platform == "win" %}
         - colorama >=0.4
         {% elif noarch_platform == "unix" %}
