@@ -13,7 +13,7 @@ source:
   sha256: f78b36b143c16f54ccdb8190d0a26b5f1901fe5a3c777e1ab29f26391af8551e
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed --disable-pip-version-check
   entry_points:
@@ -60,7 +60,6 @@ outputs:
         - watchfiles >=0.13
         - python-dotenv >=0.13
         - pyyaml >=5.1
-
     test:
       requires:
         - pip
