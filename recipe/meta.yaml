@@ -50,8 +50,8 @@ outputs:
       noarch: generic
     requirements:
       run:
-        - {{ pin_subpackage("uvicorn", max_pin="x.x.x") }}
         - __{{ noarch_platform }}
+        - {{ pin_subpackage("uvicorn", exact=True) }}
         {% if noarch_platform == "win" %}
         - colorama >=0.4
         {% elif noarch_platform == "unix" %}
