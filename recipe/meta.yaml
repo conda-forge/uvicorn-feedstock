@@ -9,12 +9,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
   sha256: ee9519c246a72b1c084cea8d3b44ed6026e78a4a309cbedae9c37e4cb9fbb175
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed --disable-pip-version-check
   entry_points:
@@ -25,17 +25,18 @@ requirements:
     - __{{ noarch_platform }}
     - hatchling
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - __{{ noarch_platform }}
     - click >=7.0
     - h11 >=0.8
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions >=4.0
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - uvicorn
   commands:
