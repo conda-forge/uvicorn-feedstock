@@ -1,4 +1,4 @@
-{% set version = "0.32.1" %}
+{% set version = "0.34.0" %}
 
 # handle unset values during re-rendering
 {% set PYTHON = PYTHON | default("$PYTHON") %}
@@ -10,11 +10,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: ee9519c246a72b1c084cea8d3b44ed6026e78a4a309cbedae9c37e4cb9fbb175
+  sha256: 404051050cd7e905de2c9a7e61790943440b3416f49cb409f965d9dcd0fa73e9
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed --disable-pip-version-check
   entry_points:
@@ -59,7 +59,7 @@ outputs:
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1
         {% endif %}
         - websockets >=10.4
-        - httptools >=0.5.0
+        - httptools >=0.6.3
         - watchfiles >=0.13
         - python-dotenv >=0.13
         - pyyaml >=5.1
