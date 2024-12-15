@@ -59,7 +59,7 @@ outputs:
         - uvloop >=0.14.0,!=0.15.0,!=0.15.1
         {% endif %}
         - websockets >=10.4
-        - httptools >=0.5.0
+        - httptools >=0.6.3
         - watchfiles >=0.13
         - python-dotenv >=0.13
         - pyyaml >=5.1
