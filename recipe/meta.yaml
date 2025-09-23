@@ -1,4 +1,4 @@
-{% set version = "0.36.0" %}
+{% set version = "0.37.0" %}
 
 # handle unset values during re-rendering
 {% set PYTHON = PYTHON | default("$PYTHON") %}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/u/uvicorn/uvicorn-{{ version }}.tar.gz
-  sha256: 527dc68d77819919d90a6b267be55f0e76704dca829d34aea9480be831a9b9d9
+  sha256: 4115c8add6d3fd536c8ee77f0e14a7fd2ebba939fed9b02583a97f80648f9e13
 
 build:
   noarch: python
