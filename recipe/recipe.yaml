@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.40.0"
+  version: "0.41.0"
   python_check_max: "3.14"
 
 recipe:
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/u/uvicorn/uvicorn-${{ version }}.tar.gz
-  sha256: 839676675e87e73694518b5574fd0f24c9d97b46bea16df7b8c05ea1a51071ea
+  sha256: 09d11cf7008da33113824ee5a1c6422d89fbc2ff476540d69a34c87fab8b571a
 
 build:
   number: 0
