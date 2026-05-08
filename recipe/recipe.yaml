@@ -87,7 +87,7 @@ about:
     using [uvloop](https://github.com/MagicStack/uvloop) and
     [httptools](https://github.com/MagicStack/httptools).
   homepage: https://pypi.org/project/uvicorn
-  repository: https://github.com/encode/uvicorn
+  repository: https://github.com/Kludex/uvicorn
   documentation: https://uvicorn.dev
 
 extra:
