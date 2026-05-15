@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: The lightning-fast ASGI server.
 
-Development: https://github.com/encode/uvicorn
+Development: https://github.com/Kludex/uvicorn
 
 Documentation: https://uvicorn.dev/
 
